@@ -4,6 +4,6 @@
   "license":      "MIT",
   "name":         "itrocks/planner",
   "repositories": [{ "type": "composer", "url": "https://packages.bappli.com" }],
-  "require":      { "itrocks/ticket": "dev-master" },
+  "require":      { "itrocks/framework": "dev-master" },
   "type":         "itrocks"
 }

@@ -1,7 +1,7 @@
 <?php
 namespace ITRocks\Planner\Task;
 
-use ITRocks\Ticket\Task;
+use ITRocks\Planner\Task;
 
 /**
  * For a task that follows another task

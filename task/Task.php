@@ -4,6 +4,7 @@ namespace ITRocks\Planner;
 use ITRocks\Framework\Traits\Has_Name;
 use ITRocks\Planner\Task\Chained_With_Delay;
 use ITRocks\Planner\Task\Has_Duration;
+use ITRocks\Planner\Task\Type;
 use ITRocks\Planner\Task\Type\Has_Type;
 
 /**
@@ -27,7 +28,7 @@ class Task
 	 * @param $delay    integer
 	 */
 	public function __construct(
-		$name = null, $type = null, $duration = null, $follows = null, $delay = null
+		$name = null, Type $type = null, $duration = null, Task $follows = null, $delay = null
 	) {
 		if ($delay)    $this->delay    = $delay;
 		if ($duration) $this->duration = $duration;

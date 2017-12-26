@@ -1,12 +1,12 @@
 <?php
 namespace ITRocks\Planner;
 
-use ITRocks\Ticket;
+use ITRocks\Framework;
 
 /**
  * The ITRocks Planner software Application class
  */
-class Application extends Ticket\Application
+class Application extends Framework\Application
 {
 
 }
