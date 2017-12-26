@@ -1,0 +1,9 @@
+{
+  "authors":      [{ "email": "baptiste.pillot@bappli.com", "name": "Baptiste Pillot" }],
+  "description":  "Planner",
+  "license":      "MIT",
+  "name":         "itrocks/planner",
+  "repositories": [{ "type": "composer", "url": "https://packages.bappli.com" }],
+  "require":      { "itrocks/ticket": "dev-master" },
+  "type":         "itrocks"
+}
