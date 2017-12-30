@@ -7,7 +7,7 @@
 <body>
 <!--BEGIN-->
 
-	<ul>
+	<ul class="year-of-weeks planning output">
 		<li class="weeks">
 			<ul class="weeks">
 				<!--weeks-->
@@ -19,7 +19,9 @@
 		<li class="resource">
 			<ul class="tasks">
 				<!--tasks-->
-				<li></li>
+				<li style="grid-column: {week.format('W').toInteger} / {endWeek}">
+					{.}
+				</li>
 				<!--tasks-->
 			</ul>
 		</li>

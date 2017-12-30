@@ -1,7 +1,7 @@
 <?php
 namespace ITRocks\Planner;
 
-use ITRocks\Framework\Traits\Has_Name;
+use ITRocks\Framework\Traits\Has_Object;
 use ITRocks\Planner\Task\Chained_With_Delay;
 use ITRocks\Planner\Task\Has_Duration;
 use ITRocks\Planner\Task\Type;
@@ -14,27 +14,36 @@ class Task
 {
 	use Chained_With_Delay;
 	use Has_Duration;
-	use Has_Name;
+	use Has_Object { __toString as private hasObjectToString; }
 	use Has_Type;
 
 	//----------------------------------------------------------------------------------- __construct
 	/**
 	 * A task constructor with a lot of base data
 	 *
-	 * @param $name     string
+	 * @param $object   object
 	 * @param $type     Type
 	 * @param $duration integer
 	 * @param $follows  Task
 	 * @param $delay    integer
 	 */
 	public function __construct(
-		$name = null, Type $type = null, $duration = null, Task $follows = null, $delay = null
+		$object = null, Type $type = null, $duration = null, Task $follows = null, $delay = null
 	) {
-		if ($delay)    $this->delay    = $delay;
-		if ($duration) $this->duration = $duration;
-		if ($follows)  $this->follows  = $follows;
-		if ($name)     $this->name     = $name;
-		if ($type)     $this->type     = $type;
+		if (isset($delay))    $this->delay    = $delay;
+		if (isset($duration)) $this->duration = $duration;
+		if (isset($follows))  $this->follows  = $follows;
+		if (isset($object))   $this->object   = $object;
+		if (isset($type))     $this->type     = $type;
+	}
+
+	//------------------------------------------------------------------------------------ __toString
+	/**
+	 * @return string
+	 */
+	public function __toString()
+	{
+		return $this->type . SP . $this->object;
 	}
 
 }

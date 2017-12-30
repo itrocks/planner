@@ -8,17 +8,6 @@ use ITRocks\Framework\Traits\Has_Name;
  */
 class Type
 {
-	use Has_Name;
-
-	//----------------------------------------------------------------------------------- __construct
-	/**
-	 * @param $name string
-	 */
-	public function __construct($name = null)
-	{
-		if ($name) {
-			$this->name = $name;
-		}
-	}
+	use Has_Name\With_Constructor;
 
 }

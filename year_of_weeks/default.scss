@@ -1,0 +1,37 @@
+
+.year-of-weeks.planning.output {
+	display: grid;
+	margin: 1em;
+
+	&, ul {
+		list-style: none;
+	}
+
+	li {
+		margin: 0;
+	}
+
+	> li {
+
+		> ul {
+			display: grid;
+			grid-template-columns: repeat(52, 1fr);
+			height: 1em;
+
+			> li {
+				border: 1px solid lightgray;
+				margin: -1px 0 0 -1px;
+			}
+
+			&.tasks {
+				position: relative;
+
+				> li {
+					height: 1em;
+					overflow: hidden;
+					position: absolute;
+				}
+			}
+		}
+	}
+}

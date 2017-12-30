@@ -14,6 +14,18 @@ class Duration
 	const MONTH  = self::DAY * 30;
 	const WEEK   = self::DAY * 7;
 
+	//--------------------------------------------------------------------------------------- toWeeks
+	/**
+	 * Gets the duration from seconds to weeks
+	 *
+	 * @param $duration integer
+	 * @return integer
+	 */
+	public static function toWeeks($duration)
+	{
+		return round($duration / self::WEEK);
+	}
+
 	//----------------------------------------------------------------------------------------- weeks
 	/**
 	 * Gets the duration of $weeks weeks

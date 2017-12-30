@@ -1,0 +1,20 @@
+.year-of-weeks.planning.output {
+  display: grid;
+  margin: 1em; }
+  .year-of-weeks.planning.output, .year-of-weeks.planning.output ul {
+    list-style: none; }
+  .year-of-weeks.planning.output li {
+    margin: 0; }
+  .year-of-weeks.planning.output > li > ul {
+    display: grid;
+    grid-template-columns: repeat(52, 1fr);
+    height: 1em; }
+    .year-of-weeks.planning.output > li > ul > li {
+      border: 1px solid lightgray;
+      margin: -1px 0 0 -1px; }
+    .year-of-weeks.planning.output > li > ul.tasks {
+      position: relative; }
+      .year-of-weeks.planning.output > li > ul.tasks > li {
+        height: 1em;
+        overflow: hidden;
+        position: absolute; }
